@@ -10,3 +10,10 @@ cc_library {
     srcs: ["libcamera_metadata/camera_metadata.cpp"],
     vendor: true
 }
+
+cc_library_shared {
+    name: "libpiex_shim",
+    shared_libs: ["libpiex"],
+    srcs: ["libpiex/piex_shim.cpp"],
+    vendor: true,
+}
