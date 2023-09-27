@@ -23,3 +23,11 @@ cc_library_shared {
     shared_libs: ["libavservices_minijail"],
     vendor: true,
 }
+
+cc_library {
+    name: "libhidlbase_shim",
+    srcs: ["libhidlbase/gBnsConstructorMap.cpp"],
+    shared_libs: ["libhidlbase"],
+    compile_multilib: "both",
+    vendor: true,
+}
