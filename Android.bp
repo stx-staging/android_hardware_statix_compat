@@ -23,10 +23,3 @@ cc_library_shared {
     shared_libs: ["libavservices_minijail"],
     vendor: true,
 }
-
-cc_library_shared {
-    name: "libprotobuf-cpp-lite-3.9.1-vendorcompat",
-    stem: "libprotobuf-cpp-lite-3.9.1",
-    shared_libs: ["libprotobuf-cpp-full-3.9.1-vendorcompat"],
-    vendor: true,
-}
