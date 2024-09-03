@@ -56,6 +56,13 @@ cc_defaults {
     ],
 }
 
+cc_library_shared {
+    name: "libaudioclient_shim",
+    shared_libs: ["libaudioclient", "libutils", "liblog"],
+    header_libs: ["libmedia_headers"],
+    srcs: ["libaudioclient/AudioTrack.cpp"],
+}
+
 cc_library {
     name: "libcrypto_shim",
     srcs: [
