@@ -157,6 +157,15 @@ cc_library {
     compile_multilib: "64",
 }
 
+cc_library {
+    name: "libmeminfo_shim",
+    shared_libs: ["libmeminfo"],
+    srcs: [
+        "libmeminfo/procmeminfo.cpp",
+    ],
+    vendor: true,
+}
+
 cc_library_shared {
     name: "libprocessgroup_shim",
     srcs: [
