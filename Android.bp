@@ -41,6 +41,17 @@ cc_library {
     vendor: true
 }
 
+cc_library_shared {
+    name: "libcodec2_shim",
+    shared_libs: [
+        "libcodec2_vndk",
+    ],
+    srcs: [
+        "libcodec2/C2Fence.cpp",
+    ],
+    vendor: true,
+}
+
 cc_library {
     name: "libgui_shim",
     defaults: ["libgui_shim_defaults"],
