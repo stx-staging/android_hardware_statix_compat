@@ -57,3 +57,13 @@ cc_library {
     compile_multilib: "both",
     vendor: true,
 }
+
+cc_library {
+    name: "libinput_shim",
+    srcs: ["libinput/Input.cpp"],
+    include_dirs: [
+        "frameworks/native/libs/ui/include",
+    ],
+    shared_libs: ["libinput"],
+    compile_multilib: "64",
+}
