@@ -271,6 +271,11 @@ cc_library_shared {
     vendor: true,
 }
 
+cc_library_shared {
+    name: "libtensorflowlite_jni_gms_client",
+    shared_libs : ["libtensorflowlite_jni"],
+}
+
 cc_prebuilt_library_shared {
     name: "libui-v30",
     vendor: true,
