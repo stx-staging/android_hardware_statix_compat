@@ -436,3 +436,26 @@ cc_prebuilt_library_shared {
     compile_multilib: "both",
     check_elf_files: false,
 }
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-3.9.1-vendorcompat",
+    stem: "libprotobuf-cpp-lite-3.9.1",
+    ignore_max_page_size: true,
+    vendor: true,
+    target: {
+        android_arm64: {
+            srcs: ["protobuf_vendorcompat/arm64/libprotobuf-cpp-lite-3.9.1.so"],
+        },
+        android_arm: {
+            srcs: ["protobuf_vendorcompat/arm/libprotobuf-cpp-lite-3.9.1.so"],
+        },
+    },
+    shared_libs: [
+        "libc++",
+        "libc",
+        "libdl",
+        "liblog",
+        "libm",
+        "libz",
+    ],
+}
