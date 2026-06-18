@@ -5,13 +5,14 @@
  */
 
 #include <binder/IBinder.h>
+#include <gui/PidUid.h>
 
 namespace android {
 namespace SurfaceComposerClient {
 
 sp<IBinder> createVirtualDisplay(const std::string& displayName, bool isSecure,
                                  bool optimizeForPower, const std::string& uniqueId,
-                                 float requestedRefreshRate);
+                                 uid_t ownerUid, float requestedRefreshRate);
 sp<IBinder> createVirtualDisplay(const std::string& displayName, bool isSecure,
                                  const std::string& uniqueId, float requestedRefreshRate);
 sp<IBinder> createDisplay(const android::String8& displayName, bool isSecure,

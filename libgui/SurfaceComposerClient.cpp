@@ -13,7 +13,7 @@ std::string kEmpty;
 
 sp<IBinder> createVirtualDisplay(const std::string& displayName, bool isSecure,
                                  const std::string& uniqueId, float requestedRefreshRate) {
-    return createVirtualDisplay(displayName, isSecure, true, uniqueId, requestedRefreshRate);
+    return createVirtualDisplay(displayName, isSecure, true, uniqueId, gui::Uid::INVALID.val(), requestedRefreshRate);
 }
 
 sp<IBinder> createDisplay(const android::String8& displayName, bool isSecure,
