@@ -71,7 +71,7 @@ cc_library_shared {
 cc_library_shared {
     name: "libaudioclient_shim",
     shared_libs: [
-        "libaudioclient",
+        "libaudiobase",
         "libutils",
         "liblog"
     ],
